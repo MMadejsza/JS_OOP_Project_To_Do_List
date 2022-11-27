@@ -1,1 +1,7 @@
-console.log('taskBAnk');
+class TaskBank {
+	constructor() {}
+
+	addTask() {}
+	removeTask() {}
+	showAllTasks() {}
+}

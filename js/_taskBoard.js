@@ -1,1 +1,3 @@
-console.log('Działa board');
+class TaskBoard {
+	constructor() {}
+}
