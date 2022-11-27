@@ -1,16 +1,18 @@
-class tasksOrganiser extends TasksBank {
-	constructor(event, task, ulInDOM, tasksList, counterPlaceInDOM) {
-		super(event, task, ulInDOM, tasksList);
-		this.counterPlaceInDOM = counterPlaceInDOM;
+class tasksOrganiser {
+	constructor() {
+		this.filteredTasks = [];
 	}
-	countTasks() {
-		this.counterPlaceInDOM.textContent = this.tasksList.length;
+	countTasks(counterPlaceInDOM) {
+		counterPlaceInDOM.textContent = this.tasksList.length;
 	}
-	indexTasks() {
-		this.tasksList.forEach(function (task, index) {
+	indexTasks(tasksList) {
+		tasksList.forEach(function (task, index) {
 			task.dataset.id = index;
 		});
 	}
+	filterTasks(e, tasksList) {
+		let wantedContent = e.target.value;
+		this.filteredTasks = tasksList.filter((task) => task.textContent.includes(wantedContent));
+	}
 	displayFilteredTasks() {}
-	filterTasks(event) {}
 }
