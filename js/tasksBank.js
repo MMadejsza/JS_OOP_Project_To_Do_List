@@ -1,4 +1,4 @@
-class TaskBank {
+class TasksBank {
 	constructor(e, task, ulInDOM) {
 		this.tasksList = [];
 		this.task = task;
