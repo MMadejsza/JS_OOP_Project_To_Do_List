@@ -13,7 +13,7 @@ class TasksBank {
 			//- if isn't empty string:
 			const li = document.createElement('li');
 			li.setAttribute('class', 'LiTask');
-			li.innerHTML = this.task.value + ' <button>Done</button>';
+			li.innerHTML = this.task.value + ' <button class="btnRemove">Done</button>';
 			li.querySelector('button').addEventListener('click', that.removeTask);
 			this.tasksList.push(li);
 			this.task.value = '';
