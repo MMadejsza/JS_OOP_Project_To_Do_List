@@ -20,6 +20,7 @@ class TasksBank {
 			li.innerHTML = this.task.value + ' <button>Done</button>';
 			li.querySelector('button').addEventListener('click', that.removeTask);
 			this.tasksList.push(li);
+			this.task.value = '';
 			console.log(li);
 			console.log(this.tasksList);
 			//- document.querySelector('li button').addEventListener('click', removeTask); will not work because for now "li" isn't in DOM yet
