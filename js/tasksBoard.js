@@ -13,6 +13,7 @@ class TasksBoard {
 	}
 	processTask(e) {
 		this.tasksBank.addTask(e);
+		console.log(this.tasksBank.tasksList);
 		this.tasksBank.showAllTasks();
 	}
 	searchTasks() {
