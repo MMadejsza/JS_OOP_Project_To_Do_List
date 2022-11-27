@@ -1,4 +1,4 @@
-class TaskBoard {
+class TasksBoard {
 	constructor() {}
 	processTask() {}
 	searchTasks() {}
