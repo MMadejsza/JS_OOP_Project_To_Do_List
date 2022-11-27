@@ -1,6 +1,6 @@
 class TasksOrganiser {
 	constructor(tasksList) {
-		this.filteredTasks = [];
+		this._filteredTasks = [];
 		this.givenTasks = tasksList;
 	}
 	countTasks(counterPlaceInDOM) {
@@ -16,11 +16,11 @@ class TasksOrganiser {
 	}
 	filterTasks(e) {
 		let wantedContent = e.target.value;
-		this.filteredTasks = this.givenTasks.filter((task) =>
+		this._filteredTasks = this.givenTasks.filter((task) =>
 			task.textContent.includes(wantedContent)
 		);
 	}
 	getFilteredTasks() {
-		return this.filteredTasks;
+		return this._filteredTasks;
 	}
 }
