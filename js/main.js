@@ -1,1 +1,1 @@
-const taskBoard = new TaskBoard();
+const taskBoard = new TasksBoard();
