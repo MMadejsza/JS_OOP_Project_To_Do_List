@@ -1,12 +1,13 @@
 class TasksBank {
 	constructor(e, task, ulInDOM) {
+		this.event = e;
 		this.tasksList = [];
 		this.task = task;
 		this.ulInDOM = ulInDOM;
 	}
-	addTask(e) {
+	addTask(event) {
 		const that = this;
-		e.preventDefault();
+		event.preventDefault();
 		if (this.task) {
 			//- if isn't empty string:
 			const li = document.createElement('li');
@@ -15,18 +16,18 @@ class TasksBank {
 			li.querySelector('button').addEventListener('click', that.removeTask);
 			tasksList.push(li);
 			//- document.querySelector('li button').addEventListener('click', removeTask); will not work because for now "li" isn't in DOM yet
-			//! indexElements(); Filter(this.tasksList).indexElements
+			tasksOrganiser().indexTasks(this.tasksList);
 		} else {
 			alert('No task given');
 		}
 	}
-	removeTask(e) {
+	removeTask(event) {
 		//- button's parent removed from DOM:
-		e.target.parentNode.remove();
+		event.target.parentNode.remove();
 		//- dataset previously given in "indexElements()"
-		elementID = e.target.parentNode.dataset.id;
+		elementID = event.target.parentNode.dataset.id;
 		this.tasksList.splice(elementID, 1);
-		//! indexElements(); Filter(this.tasksList).indexElements
+		tasksOrganiser().indexTasks(this.tasksList);
 		//! indexElements(); Filter(this.tasksList).countTasks();
 	}
 	showAllTasks() {
