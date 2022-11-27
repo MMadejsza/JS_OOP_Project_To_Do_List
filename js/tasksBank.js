@@ -19,6 +19,14 @@ class TaskBank {
 			alert('No task given');
 		}
 	}
-	removeTask() {}
+	removeTask(e) {
+		//- button's parent removed from DOM:
+		e.target.parentNode.remove();
+		//- dataset previously given in "indexElements()"
+		elementID = e.target.parentNode.dataset.id;
+		this.tasksList.splice(elementID, 1);
+		//! indexElements(); Filter(this.tasksList).indexElements
+		//! indexElements(); Filter(this.tasksList).countTasks();
+	}
 	showAllTasks() {}
 }
