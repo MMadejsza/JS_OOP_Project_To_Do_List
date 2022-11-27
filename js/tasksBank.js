@@ -1,7 +1,8 @@
 class TaskBank {
-	constructor(e, task) {
+	constructor(e, task, ulInDOM) {
 		this.tasksList = [];
 		this.task = task;
+		this.ulInDOM = ulInDOM;
 	}
 	addTask(e) {
 		const that = this;
@@ -28,5 +29,8 @@ class TaskBank {
 		//! indexElements(); Filter(this.tasksList).indexElements
 		//! indexElements(); Filter(this.tasksList).countTasks();
 	}
-	showAllTasks() {}
+	showAllTasks() {
+		this.tasksList.forEach((taskAsLi) => this.ulInDOM.appendChild(taskAsLi));
+		//! indexElements(); Filter(this.tasksList).countTasks();
+	}
 }
