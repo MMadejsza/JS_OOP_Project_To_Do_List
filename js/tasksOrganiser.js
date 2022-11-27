@@ -1,23 +1,23 @@
 class TasksOrganiser {
 	constructor(tasksList) {
 		this._filteredTasks = [];
-		this.givenTasks = tasksList;
+		this._givenTasks = tasksList;
 	}
 	countTasks(counterPlaceInDOM) {
-		counterPlaceInDOM.textContent = this.givenTasks.length;
+		counterPlaceInDOM.textContent = this._givenTasks.length;
 		if (counterPlaceInDOM.textContent == 0) {
 			counterPlaceInDOM.classList.toggle('greenCounter');
-			counterPlaceInDOM.textContent = `${this.givenTasks.length} - You've done everything!`;
+			counterPlaceInDOM.textContent = `${this._givenTasks.length} - You've done everything!`;
 		}
 	}
 	indexTasks() {
-		this.givenTasks.forEach(function (task, index) {
+		this._givenTasks.forEach(function (task, index) {
 			task.dataset.id = index;
 		});
 	}
 	filterTasks(e) {
 		let wantedContent = e.target.value;
-		this._filteredTasks = this.givenTasks.filter((task) =>
+		this._filteredTasks = this._givenTasks.filter((task) =>
 			task.textContent.includes(wantedContent)
 		);
 	}

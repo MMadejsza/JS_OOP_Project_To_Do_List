@@ -1,10 +1,10 @@
 class TasksBank {
 	constructor(task, ulInDOM, counterPlaceInDOM) {
-		this.tasksList = [];
+		this._tasksList = [];
 		this.task = task;
 		this.ulInDOM = ulInDOM;
 		this.counterPlaceInDOM = counterPlaceInDOM;
-		this.tasksOrganiser = new TasksOrganiser(this.tasksList);
+		this.tasksOrganiser = new TasksOrganiser(this._tasksList);
 	}
 	addTask(e) {
 		const that = this;
@@ -15,16 +15,16 @@ class TasksBank {
 			li.setAttribute('class', 'LiTask');
 			li.innerHTML = this.task.value + ' <button class="btnRemove">Done</button>';
 			li.querySelector('button').addEventListener('click', that.removeTask);
-			this.tasksList.push(li);
+			this._tasksList.push(li);
 			this.task.value = '';
 			//- document.querySelector('li button').addEventListener('click', removeTask); will not work because for now "li" isn't in DOM yet
-			this.tasksOrganiser.indexTasks(this.tasksList);
+			this.tasksOrganiser.indexTasks(this._tasksList);
 		} else {
 			alert('No task given');
 		}
 	}
 	showAllTasks() {
-		this.tasksList.forEach((taskAsLi) => this.ulInDOM.appendChild(taskAsLi));
+		this._tasksList.forEach((taskAsLi) => this.ulInDOM.appendChild(taskAsLi));
 		this.tasksOrganiser.countTasks(this.counterPlaceInDOM);
 	}
 	removeTask = (e) => {
@@ -32,8 +32,8 @@ class TasksBank {
 		e.target.parentNode.remove();
 		//- dataset previously given in "indexTasks()"
 		let elementID = e.target.parentNode.dataset.id;
-		this.tasksList.splice(elementID, 1);
-		this.tasksOrganiser.indexTasks(this.tasksList);
+		this._tasksList.splice(elementID, 1);
+		this.tasksOrganiser.indexTasks(this._tasksList);
 		this.tasksOrganiser.countTasks(this.counterPlaceInDOM);
 	};
 }
