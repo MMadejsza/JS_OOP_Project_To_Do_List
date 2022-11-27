@@ -1,4 +1,4 @@
-class tasksOrganiser {
+class TasksOrganiser {
 	constructor() {
 		this.filteredTasks = [];
 	}
