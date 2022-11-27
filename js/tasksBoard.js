@@ -5,10 +5,6 @@ class TasksBoard {
 		this.btnAddTask = document.querySelector('button');
 		this.ul = document.querySelector('ul');
 		this.counterPlace = document.querySelector('h2 span');
-		console.log(
-			'🚀 ~ file: tasksBoard.js ~ line 8 ~ TasksBoard ~ constructor ~ this.counterPlace',
-			this.counterPlace
-		);
 		this.tasksBank = new TasksBank(this.inputTask, this.ul, this.counterPlace);
 		this.tasksOrganiser = new TasksOrganiser();
 		this.btnAddTask.addEventListener('click', this.processTask.bind(this));
@@ -17,7 +13,6 @@ class TasksBoard {
 	}
 	processTask(e) {
 		this.tasksBank.addTask(e);
-		console.log(this.tasksBank.tasksList);
 		this.tasksBank.showAllTasks();
 	}
 	searchTasks() {
