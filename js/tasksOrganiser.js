@@ -10,6 +10,9 @@ class tasksOrganiser {
 			task.dataset.id = index;
 		});
 	}
+	filterTasks(e, tasksList) {
+		let wantedContent = e.target.value;
+		this.filteredTasks = tasksList.filter((task) => task.textContent.includes(wantedContent));
+	}
 	displayFilteredTasks() {}
-	filterTasks(event) {}
 }
