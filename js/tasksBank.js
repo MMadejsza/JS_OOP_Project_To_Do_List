@@ -15,7 +15,7 @@ class TasksBank {
 			li.setAttribute('class', 'LiTask');
 			li.innerHTML = this.task.value + ' <button>Done</button>';
 			li.querySelector('button').addEventListener('click', that.removeTask);
-			tasksList.push(li);
+			this.tasksList.push(li);
 			//- document.querySelector('li button').addEventListener('click', removeTask); will not work because for now "li" isn't in DOM yet
 			this.tasksOrganiser.indexTasks(this.tasksList);
 		} else {
