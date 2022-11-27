@@ -1,0 +1,39 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.wrap {
+	display: flex;
+	flex-direction: column;
+	justify-items: center;
+	align-items: center;
+	width: 80%;
+	height: 100vh;
+	margin: 5vh auto 0;
+	font-family: 'Roboto', sans-serif;
+}
+h1,
+h2 {
+	padding: 3vh;
+}
+button {
+	width: 30%;
+	height: 35px;
+	background-color: lightblue;
+	border: 1px solid grey;
+	border-radius: 10px;
+}
+
+input {
+	width: 15%;
+	height: 40px;
+	margin: 1.5vh;
+	line-height: 100%;
+	text-align: center;
+}
+
+span {
+	color: red;
+}
