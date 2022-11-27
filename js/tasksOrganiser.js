@@ -3,8 +3,14 @@ class tasksOrganiser extends TasksBank {
 		super(event, task, ulInDOM, tasksList);
 		this.counterPlaceInDOM = counterPlaceInDOM;
 	}
-	countTasks() {}
-	indexTasks() {}
+	countTasks() {
+		this.counterPlaceInDOM.textContent = this.tasksList.length;
+	}
+	indexTasks() {
+		this.tasksList.forEach(function (task, index) {
+			task.dataset.id = index;
+		});
+	}
 	displayFilteredTasks() {}
 	filterTasks(event) {}
 }
