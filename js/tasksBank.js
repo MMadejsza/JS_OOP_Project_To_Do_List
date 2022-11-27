@@ -5,7 +5,7 @@ class TasksBank {
 		this.task = task;
 		this.ulInDOM = ulInDOM;
 		this.counterPlaceInDOM = counterPlaceInDOM;
-		this.tasksOrganiser = new tasksOrganiser(this.tasksList, this.counterPlaceInDOM);
+		this.tasksOrganiser = new tasksOrganiser();
 	}
 	addTask(event) {
 		const that = this;
@@ -29,11 +29,11 @@ class TasksBank {
 		//- dataset previously given in "indexElements()"
 		elementID = event.target.parentNode.dataset.id;
 		this.tasksList.splice(elementID, 1);
-		this.tasksOrganiser.indexTasks();
-		this.tasksOrganiser.countTasks();
+		this.tasksOrganiser.indexTasks(this.tasksList);
+		this.tasksOrganiser.countTasks(this.counterPlaceInDOM);
 	}
 	showAllTasks() {
 		this.tasksList.forEach((taskAsLi) => this.ulInDOM.appendChild(taskAsLi));
-		this.tasksOrganiser.countTasks();
+		this.tasksOrganiser.countTasks(this.counterPlaceInDOM);
 	}
 }
