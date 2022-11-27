@@ -7,6 +7,7 @@ class TasksOrganiser {
 		counterPlaceInDOM.textContent = this.givenTasks.length;
 		if (counterPlaceInDOM.textContent == 0) {
 			counterPlaceInDOM.classList.toggle('greenCounter');
+			counterPlaceInDOM.textContent = `${this.givenTasks.length} - You've done everything!`;
 		}
 	}
 	indexTasks() {
