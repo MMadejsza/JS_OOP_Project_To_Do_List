@@ -1,15 +1,14 @@
 class TasksBank {
-	constructor(e, task, ulInDOM, counterPlaceInDOM) {
-		this.event = e;
+	constructor(task, ulInDOM, counterPlaceInDOM) {
 		this.tasksList = [];
 		this.task = task;
 		this.ulInDOM = ulInDOM;
 		this.counterPlaceInDOM = counterPlaceInDOM;
 		this.tasksOrganiser = new tasksOrganiser();
 	}
-	addTask(event) {
+	addTask(e) {
 		const that = this;
-		event.preventDefault();
+		e.preventDefault();
 		if (this.task.value) {
 			//- if isn't empty string:
 			const li = document.createElement('li');
@@ -23,11 +22,11 @@ class TasksBank {
 			alert('No task given');
 		}
 	}
-	removeTask(event) {
+	removeTask(e) {
 		//- button's parent removed from DOM:
-		event.target.parentNode.remove();
+		e.target.parentNode.remove();
 		//- dataset previously given in "indexElements()"
-		elementID = event.target.parentNode.dataset.id;
+		elementID = e.target.parentNode.dataset.id;
 		this.tasksList.splice(elementID, 1);
 		this.tasksOrganiser.indexTasks(this.tasksList);
 		this.tasksOrganiser.countTasks(this.counterPlaceInDOM);
