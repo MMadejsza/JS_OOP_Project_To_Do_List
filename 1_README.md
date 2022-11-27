@@ -1,4 +1,4 @@
-# Project_To_Do_List_OOP
+# JS_OOP_Project_To_Do_List
 
 This project is a basic "To Do List" captured in objects - Object Oriented Programing convent.
 
