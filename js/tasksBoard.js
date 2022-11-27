@@ -15,7 +15,6 @@ class TasksBoard {
 		this.tasksBank.showAllTasks();
 	}
 	searchTasks(e) {
-		console.log('action');
 		this.tasksOrganiser.filterTasks(e);
 		this.ul.textContent = '';
 		this.tasksOrganiser
