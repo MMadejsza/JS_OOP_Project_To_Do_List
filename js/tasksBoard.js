@@ -1,7 +1,7 @@
 class TasksBoard {
 	constructor() {
 		this.inputTask = document.querySelector('.task');
-		this.inputSearch = document.querySelector('input:nth-child(3)');
+		this.inputSearch = document.querySelector('.search');
 		this.btnAddTask = document.querySelector('button');
 		this.ul = document.querySelector('ul');
 		this.counterPlace = document.querySelector('h1 span');
@@ -15,6 +15,8 @@ class TasksBoard {
 		this.tasksBank.addTask(e);
 		this.tasksBank.showAllTasks();
 	}
-	searchTasks() {}
+	searchTasks() {
+		console.log('search function');
+	}
 	render() {}
 }
