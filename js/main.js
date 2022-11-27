@@ -1,0 +1,1 @@
+const taskBoard = new TaskBoard();
