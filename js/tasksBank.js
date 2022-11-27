@@ -4,7 +4,7 @@ class TasksBank {
 		this.task = task;
 		this.ulInDOM = ulInDOM;
 		this.counterPlaceInDOM = counterPlaceInDOM;
-		this.tasksOrganiser = new TasksOrganiser();
+		this.tasksOrganiser = new TasksOrganiser(this.tasksList);
 	}
 	addTask(e) {
 		const that = this;

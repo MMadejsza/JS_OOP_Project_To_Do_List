@@ -4,7 +4,11 @@ class TasksBoard {
 		this.inputSearch = document.querySelector('.search');
 		this.btnAddTask = document.querySelector('button');
 		this.ul = document.querySelector('ul');
-		this.counterPlace = document.querySelector('h1 span');
+		this.counterPlace = document.querySelector('h2 span');
+		console.log(
+			'🚀 ~ file: tasksBoard.js ~ line 8 ~ TasksBoard ~ constructor ~ this.counterPlace',
+			this.counterPlace
+		);
 		this.tasksBank = new TasksBank(this.inputTask, this.ul, this.counterPlace);
 		this.tasksOrganiser = new TasksOrganiser();
 		this.btnAddTask.addEventListener('click', this.processTask.bind(this));
