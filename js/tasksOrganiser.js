@@ -14,5 +14,7 @@ class tasksOrganiser {
 		let wantedContent = e.target.value;
 		this.filteredTasks = tasksList.filter((task) => task.textContent.includes(wantedContent));
 	}
-	displayFilteredTasks() {}
+	getFilteredTasks() {
+		return this.filteredTasks;
+	}
 }
