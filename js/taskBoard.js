@@ -1,3 +1,5 @@
 class TaskBoard {
-	constructor() {}
+	constructor() {
+		thi;
+	}
 }
