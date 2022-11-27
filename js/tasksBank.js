@@ -10,11 +10,11 @@ class TasksBank {
 	addTask(event) {
 		const that = this;
 		event.preventDefault();
-		if (this.task) {
+		if (this.task.value) {
 			//- if isn't empty string:
 			const li = document.createElement('li');
 			li.setAttribute('class', 'LiTask');
-			li.innerHTML = this.task + ' <button>Done</button>';
+			li.innerHTML = this.task.value + ' <button>Done</button>';
 			li.querySelector('button').addEventListener('click', that.removeTask);
 			tasksList.push(li);
 			//- document.querySelector('li button').addEventListener('click', removeTask); will not work because for now "li" isn't in DOM yet
