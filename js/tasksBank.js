@@ -16,7 +16,7 @@ class TasksBank {
 			li.querySelector('button').addEventListener('click', that.removeTask);
 			tasksList.push(li);
 			//- document.querySelector('li button').addEventListener('click', removeTask); will not work because for now "li" isn't in DOM yet
-			//! indexElements(); Filter(this.tasksList).indexElements
+			tasksOrganiser().indexTasks(this.tasksList);
 		} else {
 			alert('No task given');
 		}
@@ -27,7 +27,7 @@ class TasksBank {
 		//- dataset previously given in "indexElements()"
 		elementID = event.target.parentNode.dataset.id;
 		this.tasksList.splice(elementID, 1);
-		//! indexElements(); Filter(this.tasksList).indexElements
+		tasksOrganiser().indexTasks(this.tasksList);
 		//! indexElements(); Filter(this.tasksList).countTasks();
 	}
 	showAllTasks() {
