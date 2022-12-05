@@ -1,12 +1,14 @@
 # JS_OOP_Project_To_Do_List
 
+## Website: https://mmadejsza.github.io/JS_OOP_Project_To_Do_List/
+
 This project is a basic "To Do List" captured in objects - Object Oriented Programing convent.
 
 ## Uses inter alia concepts of:
 
-JS: closures, initializing classes inside another ones, passing their fragments, ".this" link loosing sorted using 3 differend methods, shifting css classes
+### JS: closures, initializing classes inside another ones, passing their fragments, ".this" link loosing sorted using 3 differend methods, shifting css classes
 
-CSS: basic Flexbox
+### CSS: basic Flexbox
 
 ## Program flow:
 
