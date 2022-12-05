@@ -8,7 +8,7 @@ JS: closures, initializing classes inside another ones, passing their fragments,
 
 CSS: basic Flexbox
 
-##Program flow:
+## Program flow:
 
 Input task title -> click the "Add Task" button to save it and display it. -> Repeat x times -> After adding a couple of them -> sort them by input phrase into "Search"
 ->only tasks containing the given phrase are displayed -> "check"/delete each task by clicking "Done" next to it -> observe changing counter and final message.
