@@ -6,9 +6,11 @@ This project is a basic "To Do List" captured in objects - Object Oriented Progr
 
 ## Uses inter alia concepts of:
 
-### JS: closures, initializing classes inside another ones, passing their fragments, ".this" link loosing sorted using 3 differend methods, shifting css classes
+### JS: 
+Closures, initializing classes inside another ones, passing their fragments, ".this" link loosing sorted using 3 differend methods, shifting css classes
 
-### CSS: basic Flexbox
+### CSS: 
+Basic Flexbox
 
 ## Program flow:
 
